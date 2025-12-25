@@ -45,13 +45,14 @@
     position: relative;
     padding: 14px 28px;
     background: #000;
-    color: #fff;
+    color: rgb(255 255 255);
     border: none;
     border-radius: 4px;
     font-weight: 600;
     letter-spacing: 2px;
     cursor: pointer;
     overflow: hidden;
+    font-family: Inter, sans-serif;
 }
 
 .emailme::after {
@@ -87,7 +88,10 @@
     margin: 0;
     font-size: 22px;
     letter-spacing: 4px;
-    color: #1a1a1a;
+    color: rgb(33, 37, 41);
+    font-style: normal;
+    font-family: Inter, Roboto, sans-serif;
+    margin-bottom: 8px;
 }
 
 .view-all {
@@ -95,7 +99,10 @@
     border: none;
     font-weight: 700;
     letter-spacing: 1px;
-    color: #111;
+      color: rgb(33, 37, 41);
+    font-style: normal;
+    font-family: Inter, Roboto, sans-serif;
+    margin-bottom: 8px;
     cursor: pointer;
 }
 
@@ -138,25 +145,34 @@
 }
 
 .product-name {
-    font-size: 14px;
-    color: #222;
+    cursor: pointer;
+    font-size: 16px;
+    color: rgb(17, 17, 17);
+    font-weight: 400;
+    line-height: 17px;
+    font-family: Inter, Roboto, sans-serif;
+
 }
 
 .product-price {
-    font-size: 14px;
-    color: #111;
+    font-size: 16px;
+     color: rgb(51, 51, 51);
+    font-weight: 700;
+    line-height: 30.7px;
+    font-family: Inter, Roboto, sans-serif;
+
 }
 
-.icons {
+.product-card .icons {
     position: absolute;
     inset: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 12px;
-    color: #040000;
+    color: #fff;
     font-size: 28px;
-    background: rgba(246, 242, 242, 0.35);
+    background: rgba(0, 0, 0, 0.35);
     border-radius: 4px;
     opacity: 0;
     visibility: hidden;

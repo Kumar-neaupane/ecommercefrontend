@@ -3,8 +3,9 @@ import "../Style/Footer.css";
 
 const Footer = () => {
   return <div className="footer">
+  <div className="footeriteams">
     <div className="iteam1">
-        <h3>info</h3>
+        <h3>Info</h3>
         <ul>
             <li>Track Your Order</li>
             <li>Our Blog</li>
@@ -72,7 +73,10 @@ const Footer = () => {
             
         </ul>
     </div>
+    </div>
+    <p className="copyright">© 2025 Stylish Online Store.</p>
   </div>;
+ 
 };
 
 export default Footer;

@@ -6,8 +6,11 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import Person3Icon from "@mui/icons-material/Person3";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import SearchIcon from "@mui/icons-material/Search";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [open,setOpen]=useState(false)
+  const [pageopen,setPageOpen]=useState(false)
   return (
     <>
       {/* Top Bar */}
@@ -18,7 +21,7 @@ const Navbar = () => {
           <InstagramIcon className="icons" />
         </div>
         <p className="special-offer">
-          <b>Special Offer:</b> Free Shipping on all the orders above $100
+          <span className="specialoffer">Special Offer</span>: Free Shipping on all the orders above $100
         </p>
         <ul className="top-menu">
           <li>Contact</li>
@@ -33,9 +36,17 @@ const Navbar = () => {
           <img src="../images/main-logo.png" alt="Logo" />
         </div>
         <ul className="nav-menu">
-          <li>
+          <li onClick={() => setOpen(!open)} className="dropdown">
             <b>Home</b>
             <span>▼</span>
+            {open && (
+        <ul className="dropdown-menu">
+          <li>About Us</li>
+          <li>Shop</li>
+          <li>Blog</li>
+         
+        </ul>
+      )}
           </li>
           <li>
             <b>Men</b>
@@ -43,8 +54,19 @@ const Navbar = () => {
           <li>
             <b>Women</b>
           </li>
-          <li>
+          <li onClick={() => setPageOpen(!pageopen)} className="dropdown">
             <b>Page</b> <span>▼</span>
+            {pageopen && (
+        <ul className="dropdown-menu">
+          <li>About Us</li>
+          <li>Shop</li>
+          <li>Blog</li>
+          <li>Blog</li>
+          <li>Blog</li>
+          <li>Blog</li>
+         
+        </ul>
+      )}
           </li>
           <li>
             <b>Shop</b>
@@ -52,12 +74,13 @@ const Navbar = () => {
           <li>
             <b>Sale</b>
           </li>
-        </ul>
+        
         <div className="nav-icons">
           <Person3Icon className="nav-icons" />
           <ShoppingCartIcon className="nav-icons" />
           <SearchIcon className="nav-icons" />
         </div>
+        </ul>
       </div>
     </>
   );

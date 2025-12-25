@@ -20,12 +20,17 @@
 
 .social-icons {
     display: flex;
-    font-size: 18px;
+    
     gap: 15px;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    height: 20px;
+    line-height: 25.6px;
 }
 
 .icons {
-    font-size: 28px !important;
+    font-size: 16px !important;
     cursor: pointer;
 }
 
@@ -38,14 +43,23 @@
 .special-offer {
     flex: 1;
     text-align: center;
-    font-size: 17px;
-    color: black;
+    font-size: 16px;
+    color: rgb(17 17 17);
+    font-family:Inter, sans-serif;
+    font-weight: 300;
+    line-height: 25px;
+}
+.specialoffer{
+    font-weight: bold;
 }
 
 .top-menu {
     display: flex;
     gap: 20px;
     list-style: none;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
 }
 
 .top-menu li {
@@ -80,11 +94,13 @@
     display: flex;
     gap: 30px;
     list-style: none;
-    font-size: 20px;
-    color: black;
-    font-weight: bold;
+    font-size: 16px;
+    color: rgb(51,51,51);
+    font-weight: 700;
+    line-height: 25px;
     margin-left: auto;
     margin-right: 30px;
+    font-family: Inter, sans-serif;
 }
 
 .nav-menu li {
@@ -102,11 +118,31 @@
 }
 
 .nav-icons {
-    display: flex;
+    display: inline-flex;
     gap: 20px;
-    font-size: 18px;
+    line-height: 25px;
+    font-size: 16px;
+    font-weight: 300;
+    color: rgb(17 17 17);
+    font-family: Inter, sans-serif;
+    height: 23px;
 }
 
 .nav-icons svg {
     cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+    padding-left: 10px;
+
+  position: absolute;
+  top: 100%;
+   z-index: 9999;
+  background: white;
+  width: 100px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
