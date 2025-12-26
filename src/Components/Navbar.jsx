@@ -7,10 +7,13 @@ import Person3Icon from "@mui/icons-material/Person3";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import SearchIcon from "@mui/icons-material/Search";
 import { useState } from "react";
+import MenuSharpIcon from '@mui/icons-material/MenuSharp';
+import CloseSharpIcon from '@mui/icons-material/CloseSharp';
 
 const Navbar = () => {
-  const [open,setOpen]=useState(false)
-  const [pageopen,setPageOpen]=useState(false)
+  const [open,setOpen]=useState(false);
+  const [menuopen, setMenuOpen] = useState(false);
+  const [pageopen,setPageOpen]=useState(false);
   return (
     <>
       {/* Top Bar */}
@@ -35,7 +38,15 @@ const Navbar = () => {
         <div className="logo">
           <img src="../images/main-logo.png" alt="Logo" />
         </div>
-        <ul className="nav-menu">
+        <ul className={`nav-menu ${menuopen ? "active" : ""}`}>
+          <div className="mobile-menu-header">
+            <div className="mobile-logo">
+              <img src="../images/main-logo.png" alt="Logo" />
+            </div>
+            <div className="menu-close" onClick={() => setMenuOpen(false)}>
+              <CloseSharpIcon />
+            </div>
+          </div>
           <li onClick={() => setOpen(!open)} className="dropdown">
             <b>Home</b>
             <span>▼</span>
@@ -75,12 +86,16 @@ const Navbar = () => {
             <b>Sale</b>
           </li>
         
-        <div className="nav-icons">
+       
+        </ul>
+         <div className="nav-icons">
           <Person3Icon className="nav-icons" />
           <ShoppingCartIcon className="nav-icons" />
           <SearchIcon className="nav-icons" />
         </div>
-        </ul>
+        <div className="hamburger" onClick={()=>setMenuOpen(!menuopen)} aria-label="Toggle navigation" aria-expanded={menuopen}>
+          <MenuSharpIcon />
+        </div>
       </div>
     </>
   );

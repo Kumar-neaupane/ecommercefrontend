@@ -24,6 +24,7 @@ function Slider() {
     { id: 3, src: "../images/card-large-item2.jpg" },
   ];
   return (
+    
     <Swiper
       modules={[Pagination]}
       pagination={{ clickable: true }}

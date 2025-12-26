@@ -30,9 +30,31 @@ h3{
     color: rgb(33, 37, 41);
 }
 .copyright{
-    margin-top: 20px;
-    margin-left: 250px;
-    margin-bottom: 50px;
+        margin-top: 20px;
+        margin-left: 250px;
+        margin-bottom: 50px;
     color: gray;
     font-size: 19px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .footeriteams {
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+    .copyright {
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .footeriteams {
+        gap: 24px;
+        padding: 0 16px;
+    }
+    .copyright {
+        margin: 24px 0 40px;
+    }
 }
