@@ -59,7 +59,7 @@ const Homepage = () => {
       <section className="discounntcoupons">
         <div className="dc-text">
           <h1>10% OFF Discount Coupons</h1>
-          <p>Subscribe us to get 10% OFF on all the purchases</p>
+          <p >Subscribe us to get 10% OFF on all the purchases</p>
         </div>
         <button className="emailme">EMAIL ME</button>
       </section>
@@ -96,6 +96,8 @@ const Homepage = () => {
       <Latestproduct />
       <hr/>
       <Footer />
+ 
+     
     </div>
   );
 };

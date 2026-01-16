@@ -9,13 +9,27 @@ import SearchIcon from "@mui/icons-material/Search";
 import { useState } from "react";
 import MenuSharpIcon from '@mui/icons-material/MenuSharp';
 import CloseSharpIcon from '@mui/icons-material/CloseSharp';
+import Login from "./Login";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [open,setOpen]=useState(false);
   const [menuopen, setMenuOpen] = useState(false);
   const [pageopen,setPageOpen]=useState(false);
+  const [search, showSearch] = useState(false);
+  const [login, setLogin] = useState(false);
   return (
     <>
+      {/* Search Bar */}
+      {search && (
+        <div className="searchbar">
+          <div className="search-container">
+            <input className="searchinputtop" placeholder="Search..." autoFocus />
+            <SearchIcon className="search-icon-input" />
+            <CloseSharpIcon className="search-close-btn" onClick={() => showSearch(false)} />
+          </div>
+        </div>
+      )}
       {/* Top Bar */}
       <div className="top-bar">
         <div className="social-icons">
@@ -29,7 +43,7 @@ const Navbar = () => {
         <ul className="top-menu">
           <li>Contact</li>
           <li>Cart</li>
-          <li>Login</li>
+          <li  onClick={()=>{setLogin(true)}}>Login</li>
         </ul>
       </div>
 
@@ -52,18 +66,23 @@ const Navbar = () => {
             <span>▼</span>
             {open && (
         <ul className="dropdown-menu">
-          <li>About Us</li>
+          <li className="text-red-500">About Us</li>
           <li>Shop</li>
           <li>Blog</li>
          
         </ul>
       )}
           </li>
+          
           <li>
+          <Link to="/men">
             <b>Men</b>
+            </Link>
           </li>
           <li>
+          <Link to="/women">
             <b>Women</b>
+            </Link>
           </li>
           <li onClick={() => setPageOpen(!pageopen)} className="dropdown">
             <b>Page</b> <span>▼</span>
@@ -89,14 +108,17 @@ const Navbar = () => {
        
         </ul>
          <div className="nav-icons">
-          <Person3Icon className="nav-icons" />
+        
+          <Person3Icon onClick={() => setLogin(true)} className="nav-icons"  />
           <ShoppingCartIcon className="nav-icons" />
-          <SearchIcon className="nav-icons" />
+          <SearchIcon onClick={() => showSearch(true)} className="nav-icons showsearch" /> 
         </div>
         <div className="hamburger" onClick={()=>setMenuOpen(!menuopen)} aria-label="Toggle navigation" aria-expanded={menuopen}>
           <MenuSharpIcon />
         </div>
       </div>
+      {/*Login close logic*/}
+      {login && <Login close={() => setLogin(false)} />}
     </>
   );
 };

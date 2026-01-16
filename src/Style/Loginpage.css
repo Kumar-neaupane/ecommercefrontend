@@ -1,0 +1,138 @@
+/* Overlay */
+.login-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Modal box */
+.login-box {
+  background: white;
+  background-image: url('../../images/login-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 380px;
+  padding: 30px 28px 35px;
+  border-radius: 12px;
+  position: relative;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Title */
+.login-title {
+  text-align: center;
+  margin-bottom: 22px;
+  font-size: 22px;
+}
+
+/* Inputs */
+.login-input {
+  width: 100%;
+  padding: 11px 12px;
+  margin-bottom: 14px;
+  border: 1px solid #999;
+  outline: none;
+}
+
+/* Remember + forgot */
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 22px;
+}
+
+/* Fix checkbox alignment */
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+/* Buttons container */
+.login-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+/* Base button styles */
+.animated-btn {
+  position: relative;
+  padding: 10px 22px;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.4s ease;
+}
+
+/* Login button - Red */
+.login-btn {
+  background: #d32f2f;
+  color: white;
+}
+
+.login-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  transition: left 0.4s ease;
+  z-index: -1;
+}
+
+.login-btn:hover::before {
+  left: 0;
+}
+
+/* Register button - White */
+.register-btn {
+  background: white;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.register-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  transition: left 0.4s ease;
+  z-index: -1;
+}
+
+.register-btn:hover {
+  color: white;
+}
+
+.register-btn:hover::before {
+  left: 0;
+}
