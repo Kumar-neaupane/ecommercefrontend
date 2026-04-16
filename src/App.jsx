@@ -3,8 +3,7 @@ import Homepage from "./Components/Homepage";
 import Login from "./Components/Login";
 import Latestproduct from "./Components/Latestproduct";
 import Men from "./Components/Pages/Men";
-import Women from "./Components/Pages/Women"
-
+import Women from "./Components/Pages/Women";
 
 function App() {
   return (
@@ -12,9 +11,9 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Homepage />} />
-        <Route path="/latest" element = {<Latestproduct />} />
-        <Route path="/men" element = {<Men />} />
-        <Route path="/women" element = {<Women />} />
+        <Route path="/latest" element={<Latestproduct />} />
+        <Route path="/men" element={<Men />} />
+        <Route path="/women" element={<Women />} />
       </Routes>
     </BrowserRouter>
   );
